@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - StudentDatabase</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/StudentDatabase.styles.css" asp-append-version="true" />
+</head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-2">
+                    <a class="navbar-brand" href="#">
+                        <img src="/Ginilytics-logo.png" alt="logo" width="150" height="50" style="margin-top:20px; margin-bottom:20px;">
+                    </a>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" asp-area="" asp-controller="Home" asp-action="welcome">WELCOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="TblDepartments" asp-action="Index">DEPARTMENT</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="TblCourses" asp-action="Index">COURSES</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="TblTeachers" asp-action="Index">TEACHER</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="TblStudents" asp-action="Index">STUDENT</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-10">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <header class="mt-3 mb-3">
+                                <nav class="navbar">
+                                    <div class="container-fluid">
+                                        <a class="btn" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                                            <i class="fa fa-bars"></i>
+                                        </a>
+
+
+
+                                    </div>
+                                </nav>
+                            </header>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <main role="main" class="pb-3">
+                                @RenderBody()
+                            </main>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <footer>
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="/Ginilytics-logo.png" alt="logo" width="140" height="40" style="margin-top:20px; margin-bottom:20px;">
+                    <span class=" " style="color:white; font-size:small; margin-left:240px; margin-right:20px;">About US</span>
+                    <span class=" " style="color:white; font-size:small; margin-right:20px;">Contact US</span>
+                    <span class=" " style="color:white; font-size:small; margin-right:20px;">Email Us</span>
+                    <span class=" " style="color:white; font-size:small; margin-right:20px;">Gallery</span>
+                    <span class=" " style="color:white; font-size:small;">Our Services</span>
+                </a>
+                <div class="text-center" style="border-top:1px solid white;color:white;">
+                    <i class="fa fa-linkedin mx-2 mt-3"></i>
+                    <i class="fa fa-facebook mx-2 mt-3"></i>
+                    <i class="fa fa-twitter mx-2 mt-3"></i>
+                    <i class="fa fa-instagram mx-2 mt-3"></i>
+                    <i class="fa fa-envelope mx-2 mt-3"></i>
+                    <i class="fa fa-"></i>
+                    <div class="mt-3 pb-5">&copy;Copyright. All right reserved</div>
+                </div>
+
+            </div>
+        </footer>
+
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+
+        @await RenderSectionAsync("Scripts", required: false)
+    </body>
+
+</html>
